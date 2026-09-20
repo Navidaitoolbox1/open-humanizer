@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "description": "Evidence-first editorial rules for natural English writing.",
+  "rules": [
+    {"id":"promotional_language","label":"Promotional or inflated language","severity":"medium","patterns":["groundbreaking","renowned","vibrant","rich","profound","revolutionary","world-class","seamless","innovative solution","showcase","boasts","testament","exceptional value"],"suggestion":"Replace praise with a specific fact, source, metric, or decision."},
+    {"id":"importance_claim","label":"Unsupported importance claim","severity":"medium","patterns":["crucial","pivotal","vital","significant","strategic importance","lasting impact","broader significance"],"suggestion":"State what changed and cite the evidence instead of asserting importance."},
+    {"id":"vague_attribution","label":"Vague attribution","severity":"high","patterns":["experts say","industry reports show","observers note","several sources","many professionals believe","widely recognised","research suggests"],"suggestion":"Name the source, date, and exact claim, or label it as an internal hypothesis."},
+    {"id":"superficial_analysis","label":"Unsupported analytical -ing phrase","severity":"low","patterns":["highlighting","emphasizing","emphasising","reflecting","fostering","enhancing","cultivating","contributing to","ensuring","showcasing"],"suggestion":"Explain the causal link or remove the phrase."},
+    {"id":"formulaic_contrast","label":"Formulaic contrast","severity":"low","patterns":["not only","not just","it is not","despite these challenges","future prospects","broader landscape"],"suggestion":"Use a direct sentence that states the actual difference or limitation."},
+    {"id":"placeholder","label":"Placeholder text","severity":"high","patterns":["[NAME]","[DATE]","[TBD]","[TODO]","2025-xx-xx","insert link","add citation","replace this text"],"suggestion":"Resolve the placeholder before submission."},
+    {"id":"internal_marker","label":"Internal AI or tool marker","severity":"high","patterns":["contentReference","oaicite","oai_citation","turn0search","turn0image","[cite:","start_span","end_span","grok_card","attached_file","ppl-ai-file-upload",":::writing"],"suggestion":"Remove the internal marker and replace it with a verified source if a citation is required."},
+    {"id":"assistant_language","label":"Assistant-to-user language","severity":"medium","patterns":["I hope this helps","Certainly","Would you like me to","Let me know","Here is a detailed breakdown","As an AI language model"],"suggestion":"Write the finding directly in the report's professional voice."},
+    {"id":"em_dash","label":"Em dash","severity":"low","patterns":["—"],"suggestion":"Use a full stop, comma, colon, or parentheses."}
+  ]
+}

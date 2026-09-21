@@ -33,6 +33,15 @@ class HumanizerTests(unittest.TestCase):
         self.assertIn("12 September 2026", report["evidence"]["dates"])
         self.assertIn("5", report["evidence"]["numbers"])
 
+    def test_french_rules_flag_french_ai_style_phrases(self):
+        french_rules = load_rules(Path(__file__).parents[1] / "rules" / "french_writing_rules.json")
+        report = analyze_text("Cette solution révolutionnaire est cruciale. Les experts affirment que c'est non seulement innovant, mais aussi fluide.", french_rules)
+        rule_ids = {finding["rule_id"] for finding in report["findings"]}
+        self.assertIn("promotional_language", rule_ids)
+        self.assertIn("importance_claim", rule_ids)
+        self.assertIn("vague_attribution", rule_ids)
+        self.assertIn("formulaic_contrast", rule_ids)
+
     def test_output_is_json_serialisable(self):
         report = analyze_text("The report shows a pending decision.", self.rules)
         json.dumps(report)

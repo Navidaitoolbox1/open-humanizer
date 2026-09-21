@@ -2,7 +2,7 @@
 
 A free, open-source, local-first editorial quality checker for natural English writing.
 
-Open Humanizer applies the project's anti-AI-writing rules to internship reports, dashboard copy, Decoran marketing drafts, and Navid Agency content. It flags patterns and explains what to review. It does not generate a false certificate that text is human-written and does not promise to bypass AI detectors.
+Open Humanizer applies a public editorial rule set to English writing. It flags patterns and explains what to review. It does not generate a false certificate that text is human-written and does not promise to bypass AI detectors.
 
 ## What it checks
 
@@ -45,7 +45,7 @@ Open <http://127.0.0.1:8788>.
 
 ## Use the rules in another project
 
-The rule contract is in [`rules/writing_rules.json`](rules/writing_rules.json). The source checklist is in [`docs/ANTI_AI_WRITING_SIGNS.md`](docs/ANTI_AI_WRITING_SIGNS.md). The same checklist is used by the internship dashboard at `reports/ANTI_AI_WRITING_SIGNS.md`.
+The rule contracts are in [`rules/writing_rules.json`](rules/writing_rules.json) and [`rules/french_writing_rules.json`](rules/french_writing_rules.json). The source checklists are in [`docs/ANTI_AI_WRITING_SIGNS.md`](docs/ANTI_AI_WRITING_SIGNS.md) and [`docs/FRENCH_WRITING_RULES.md`](docs/FRENCH_WRITING_RULES.md). For website context, see [navidaitoolbox.com](https://navidaitoolbox.com).
 
 ## Test
 

@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-fr",
+  "language": "fr",
+  "description": "Editorial rules for natural French writing.",
+  "rules": [
+    {"id":"promotional_language","label":"Langage promotionnel ou emphatique","severity":"medium","patterns":["révolutionnaire","innovant","solution innovante","expérience fluide","de classe mondiale","incontournable","remarquable","exceptionnel","riche","vibrant","témoignage de","met en valeur","au cœur de"],"suggestion":"Replace praise with a specific fact, source, metric, or decision."},
+    {"id":"importance_claim","label":"Importance non étayée","severity":"medium","patterns":["crucial","cruciale","essentiel","essentielle","majeur","majeure","déterminant","déterminante","impact durable","importance stratégique","tournant décisif"],"suggestion":"State what changed and cite the evidence instead of asserting importance."},
+    {"id":"vague_attribution","label":"Attribution vague","severity":"high","patterns":["les experts affirment","les experts estiment","les rapports montrent","selon plusieurs sources","il est largement reconnu","la recherche montre","les professionnels considèrent"],"suggestion":"Name the source, date, and exact claim, or label it as an internal hypothesis."},
+    {"id":"superficial_analysis","label":"Analyse superficielle en participe présent","severity":"low","patterns":["soulignant","mettant en évidence","reflétant","favorisant","améliorant","renforçant","contribuant à","garantissant","permettant de"],"suggestion":"Explain the causal link or remove the phrase."},
+    {"id":"formulaic_contrast","label":"Formule de contraste automatique","severity":"low","patterns":["non seulement","mais aussi","ce n'est pas","malgré ces défis","dans le paysage","perspectives d'avenir","en conclusion","dans l'ensemble"],"suggestion":"Use a direct sentence that states the actual difference or limitation."},
+    {"id":"placeholder","label":"Texte provisoire","severity":"high","patterns":["[NOM]","[DATE]","[À COMPLÉTER]","[TODO]","insérer le lien","ajouter la citation","à remplacer"],"suggestion":"Resolve the placeholder before submission."},
+    {"id":"internal_marker","label":"Marqueur interne d'outil ou d'IA","severity":"high","patterns":["contentReference","oaicite","oai_citation","turn0search","turn0image","[cite:","start_span","end_span","grok_card","attached_file","ppl-ai-file-upload",":::writing"],"suggestion":"Remove the internal marker and replace it with a verified source if a citation is required."},
+    {"id":"assistant_language","label":"Formule d'assistant","severity":"medium","patterns":["j'espère que cela vous aide","certainement","bien sûr","souhaitez-vous que je","n'hésitez pas à me dire","voici une analyse détaillée","en tant que modèle de langage"],"suggestion":"Write the finding directly in the professional voice."},
+    {"id":"em_dash","label":"Tiret cadratin","severity":"low","patterns":["—"],"suggestion":"Use a full stop, comma, colon, or parentheses."}
+  ]
+}

@@ -1,6 +1,6 @@
 # Anti-AI writing signs and human writing rules
 
-This checklist is shared with the internship dashboard and Navid Agency content workflow. It is an editorial quality guide, not an AI detector.
+This checklist is a public editorial quality guide for natural English writing. It is not an AI detector.
 
 ## Avoid
 
